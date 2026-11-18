@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA8 Temizlik | Sivas Profesyonel Temizlik Hizmetleri</title>
+  <meta name="description"
+    content="NOVA8 Temizlik - Sivas'ta ev, ofis, inşaat sonrası ve detaylı temizlik hizmetleri. İşletme Sahibi: Banu Beğen. Hızlı iletişim ve kaliteli hijyen.">
+
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      /* Turkuaz, Yeşil ve Mavi harmanı kurumsal ve ferah renk paleti */
+      --primary: #0284c7;
+      /* Canlı Temizlik Mavisi */
+      --primary-dark: #0369a1;
+      --turquoise: #0d9488;
+      /* Doğal Turkuaz / Deniz Yeşili */
+      --turquoise-light: #14b8a6;
+      --teal-green: #059669;
+      /* Tazeleyici Yeşil */
+      --accent-gradient: linear-gradient(135deg, #0d9488 0%, #0284c7 50%, #059669 100%);
+      --soft-bg: #f0fdfa;
+      /* Ferah çok açık turkuaz/beyaz */
+      --card-bg: #ffffff;
+      --text-dark: #0f172a;
+      /* Okunaklı koyu gri/lacivert */
+      --text-muted: #475569;
+      --border-color: #ccfbf1;
+      --shadow-sm: 0 4px 6px -1px rgba(13, 148, 136, 0.08);
+      --shadow-md: 0 10px 25px -5px rgba(2, 132, 199, 0.12);
+      --shadow-lg: 0 20px 35px -10px rgba(13, 148, 136, 0.18);
+      --radius: 16px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f8fafc;
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding-bottom: 70px;
+      /* Mobilde alt bar için boşluk */
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .brand-font {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Üst Bilgi Çubuğu (Top Bar) */
+    .top-bar {
+      background: #0f172a;
+      color: #e2e8f0;
+      font-size: 0.88rem;
+      padding: 8px 0;
+    }
+
+    .top-bar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-bar-left,
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .top-bar a:hover {
+      color: var(--turquoise-light);
+    }
+
+    /* Ana Menü / Header */
+    header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+
+    /* NOVA 8 Kurumsal Özel Logo Stili */
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      transition: transform 0.25s ease;
+    }
+
+    .brand-logo:hover {
+      transform: translateY(-1px);
+    }
+
+    .premium-logo-icon {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .brand-logo:hover .premium-logo-icon {
+      transform: scale(1.05);
+      filter: drop-shadow(0 8px 20px rgba(2, 132, 199, 0.45));
+    }
+
+    .premium-logo-svg {
+      display: block;
+      width: 54px;
+      height: 54px;
+    }
+
+    .brand-title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .brand-main {
+      display: flex;
+      align-items: baseline;
+      gap: 4px;
+      line-height: 1;
+    }
+
+    .brand-nova {
+      font-size: 1.55rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: #0f172a;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .brand-eight {
+      font-size: 1.65rem;
+      font-weight: 900;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-right: 2px;
+      filter: drop-shadow(0 2px 4px rgba(2, 132, 199, 0.25));
+    }
+
+    .brand-dot {
+      color: #0d9488;
+      font-size: 1.2rem;
+      font-weight: 800;
+      opacity: 0.7;
+    }
+
+    .brand-service {
+      font-size: 1.35rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      color: #0284c7;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .brand-tagline {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #0d9488;
+      text-transform: uppercase;
+      margin-top: 4px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .tagline-star {
+      color: #0284c7;
+      font-size: 0.85rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--turquoise);
+    }
+
+    .header-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-gradient);
+      color: #fff !important;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 14px rgba(13, 148, 136, 0.3);
+    }
+
+    .header-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(13, 148, 136, 0.4);
+    }
+
+    /* Hero Bölümü */
+    .hero {
+      position: relative;
+      background: linear-gradient(135deg, rgba(240, 253, 250, 0.9) 0%, rgba(240, 249, 255, 0.85) 100%),
+        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 70px 0 80px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .owner-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      position: relative;
+      padding: 12px 20px 12px 13px;
+      margin-bottom: 22px;
+      color: #f8fafc;
+      background: linear-gradient(125deg, #0b2534 0%, #123d4b 58%, #0b665f 100%);
+      border: 1px solid rgba(208, 177, 109, 0.8);
+      border-radius: 14px 5px 14px 5px;
+      box-shadow: 0 10px 24px rgba(8, 47, 61, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+      isolation: isolate;
+    }
+
+    .owner-pill::before {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: 10px 3px 10px 3px;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .owner-pill .owner-seal {
+      display: grid;
+      place-items: center;
+      flex: 0 0 42px;
+      width: 42px;
+      height: 42px;
+      border: 1px solid #dfc681;
+      border-radius: 50%;
+      color: #f4d98f;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.03));
+      box-shadow: 0 0 0 3px rgba(223, 198, 129, 0.12);
+      font-size: 1rem;
+    }
+
+    .owner-sign-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      line-height: 1.2;
+    }
+
+    .owner-sign-copy strong {
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.15px;
+    }
+
+    .owner-sign-copy span {
+      color: #d5c58f;
+      font-size: 0.66rem;
+      font-weight: 700;
+      letter-spacing: 1.25px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 480px) {
+      .owner-pill {
+        gap: 11px;
+        padding: 10px 15px 10px 12px;
+      }
+
+      .owner-pill .owner-seal {
+        flex-basis: 38px;
+        width: 38px;
+        height: 38px;
+      }
+    }
+
+    .hero-text h2 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      color: #092c42;
+    }
+
+    .hero-text h2 span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      max-width: 540px;
+    }
+
+    /* Buton Grubu */
+    .action-btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 22px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-whatsapp {
+      background-color: #25d366;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #20bd5a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    }
+
+    .btn-call {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.3);
+    }
+
+    .btn-call:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+    }
+
+    .btn-instagram {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(220, 39, 67, 0.3);
+    }
+
+    .btn-instagram:hover {
+      opacity: 0.95;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(220, 39, 67, 0.4);
+    }
+
+    .btn-location {
+      background: #ffffff;
+      color: #0f172a;
+      border: 1.5px solid #cbd5e1;
+    }
+
+    .btn-location:hover {
+      border-color: var(--turquoise);
+      color: var(--turquoise);
+      background: #f0fdfa;
+      transform: translateY(-2px);
+    }
+
+    /* Hero Sağ Kart */
+    .hero-card {
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .hero-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .hero-card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: #ecfeff;
+      color: var(--turquoise);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .features-list li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #334155;
+    }
+
+    .features-list li i {
+      color: var(--teal-green);
+      background: #ecfdf5;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+    }
+
+    /* Hızlı İletişim Şeridi */
+    .quick-contact-banner {
+      background: #ffffff;
+      padding: 20px 0;
+      border-bottom: 1px solid #e2e8f0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .banner-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .contact-item-box {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s;
+    }
+
+    .contact-item-box:hover {
+      border-color: var(--turquoise-light);
+      background: #f0fdfa;
+    }
+
+    .contact-item-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+
+    .contact-item-icon.tel-bg {
+      background: var(--primary);
+    }
+
+    .contact-item-icon.wp-bg {
+      background: #25d366;
+    }
+
+    .contact-item-icon.ig-bg {
+      background: #e1306c;
+    }
+
+    .contact-item-icon.loc-bg {
+      background: var(--turquoise);
+    }
+
+    .contact-item-text span {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .contact-item-text strong {
+      font-size: 0.95rem;
+      color: var(--text-dark);
+    }
+
+    /* Bölüm Başlıkları */
+    .section-header {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 46px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: var(--turquoise);
+      background: #ccfbf1;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Hizmetlerimiz Bölümü */
+    .services-section {
+      padding: 70px 0;
+      background: #ffffff;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 28px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--turquoise-light);
+    }
+
+    .service-img-wrapper {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: #e2e8f0;
+    }
+
+    .service-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .service-card:hover .service-img-wrapper img {
+      transform: scale(1.05);
+    }
+
+    .service-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(4px);
+      color: #ffffff;
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .service-body {
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .service-body h3 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #0f172a;
+    }
+
+    .service-body p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      flex-grow: 1;
+    }
+
+    .service-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .service-btn {
+      color: var(--turquoise);
+      font-weight: 700;
+      font-size: 0.88rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+
+    .service-btn:hover {
+      color: var(--primary);
+      gap: 10px;
+    }
+
+    /* Gerçek Fotoğraflar Galerisi */
+    .gallery-section {
+      padding: 70px 0;
+      background: var(--soft-bg);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      height: 240px;
+      box-shadow: var(--shadow-sm);
+      border: 2px solid #ffffff;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 14px;
+      background: linear-gradient(to top, rgba(15, 23, 42, 0.85) 0%, transparent 100%);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    /* Hakkımızda & Banu Beğen Bölümü */
+    .about-section {
+      padding: 70px 0;
+      background: #ffffff;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about-image-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .about-image-card img {
+      width: 100%;
+      height: 420px;
+      object-fit: cover;
+    }
+
+    .experience-tag {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: #ffffff;
+      padding: 14px 20px;
+      border-radius: 14px;
+      box-shadow: var(--shadow-lg);
+      border-left: 5px solid var(--turquoise);
+    }
+
+    .experience-tag h4 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+    }
+
+    .experience-tag p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .about-content h2 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      font-size: 0.98rem;
+    }
+
+    .highlight-box {
+      background: #ecfeff;
+      border-left: 4px solid var(--turquoise);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 24px;
+    }
+
+    .highlight-box strong {
+      color: #0e7490;
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    /* Adres & Konum Bölümü */
+    .location-section {
+      padding: 70px 0;
+      background: #f8fafc;
+    }
+
+    .location-wrapper {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+    }
+
+    .location-details {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .location-details h3 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin-bottom: 10px;
+    }
+
+    .address-card {
+      background: #f0fdfa;
+      border: 1.5px dashed #5eead4;
+      border-radius: 14px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    .address-card p {
+      font-size: 1.02rem;
+      font-weight: 600;
+      color: #134e4a;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      line-height: 1.5;
+    }
+
+    .address-card p i {
+      color: #0d9488;
+      font-size: 1.3rem;
+      margin-top: 3px;
+    }
+
+    .location-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .map-frame-box {
+      min-height: 380px;
+      background: #e2e8f0;
+    }
+
+    .map-frame-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    /* Footer */
+    footer {
+      background: #091e2b;
+      color: #cbd5e1;
+      padding: 50px 0 25px;
+      border-top: 3px solid var(--turquoise);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-about h3 {
+      color: #ffffff;
+      font-size: 1.4rem;
+      margin-bottom: 14px;
+    }
+
+    .footer-links h4,
+    .footer-contact h4 {
+      color: #ffffff;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-links h4::after,
+    .footer-contact h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 35px;
+      height: 2px;
+      background: var(--turquoise);
+    }
+
+    .footer-links ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-links a:hover {
+      color: var(--turquoise-light);
+    }
+
+    .footer-contact p {
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 0.95rem;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #94a3b8;
+    }
+
+    /* Mobilde Sabit Alt Aksiyon Çubuğu (Telefon Ekranına Uyumlu) */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      display: none;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+      border-top: 1px solid #e2e8f0;
+      padding: 8px 12px;
+    }
+
+    .mobile-bar-inner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .mobile-action-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 2px;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
+      line-height: 1.1;
+      gap: 4px;
+    }
+
+    .mobile-action-btn i {
+      font-size: 1.15rem;
+    }
+
+    .m-call {
+      background: var(--primary);
+    }
+
+    .m-wp {
+      background: #25d366;
+    }
+
+    .m-ig {
+      background: #e1306c;
+    }
+
+    .m-map {
+      background: var(--turquoise);
+    }
+
+    /* Responsive Tasarım Kuralları */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .location-wrapper {
+        grid-template-columns: 1fr;
+      }
+
+      .map-frame-box {
+        min-height: 280px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-sticky-bar {
+        display: block;
+      }
+
+      .nav-links,
+      .header-cta-btn {
+        display: none;
+      }
+
+      .top-bar {
+        display: none;
+        /* Mobilde sadeleştirmek için */
+      }
+
+      .hero {
+        padding: 40px 0 50px;
+      }
+
+      .hero-text h2 {
+        font-size: 1.9rem;
+      }
+
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .action-btn-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .btn {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+      }
+
+      .about-image-card img {
+        height: 280px;
+      }
+
+      .location-details {
+        padding: 24px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .action-btn-group {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Üst Bilgi Barı -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span><i class="fa-solid fa-user-tie" style="color: #2dd4bf; margin-right: 5px;"></i> İşletme Sahibi:
+          <strong>Banu Beğen</strong></span>
+        <span><i class="fa-solid fa-location-dot" style="color: #38bdf8; margin-right: 5px;"></i> Sivas / Türkiye</span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:05455407587"><i class="fa-solid fa-phone" style="color: #38bdf8;"></i> 0545 540 75 87</a>
+        <a href="https://instagram.com/toprak_nova8" target="_blank" rel="noopener noreferrer"><i
+            class="fa-brands fa-instagram" style="color: #f472b6;"></i> @toprak_nova8</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ana Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <a href="#" class="brand-logo">
+          <div class="premium-logo-icon">
+            <svg width="54" height="54" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="premium-logo-svg">
+              <defs>
+                <linearGradient id="novaBg" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#0284c7" />
+                  <stop offset="50%" stop-color="#0f766e" />
+                  <stop offset="100%" stop-color="#047857" />
+                </linearGradient>
+                <linearGradient id="goldNova" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#38bdf8" />
+                  <stop offset="50%" stop-color="#ffffff" />
+                  <stop offset="100%" stop-color="#2dd4bf" />
+                </linearGradient>
+                <filter id="shadowGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#0284c7" flood-opacity="0.35" />
+                </filter>
+              </defs>
+              <rect x="2" y="2" width="52" height="52" rx="16" fill="url(#novaBg)" filter="url(#shadowGlow)" />
+              <rect x="3.5" y="3.5" width="49" height="49" rx="14.5" stroke="rgba(255,255,255,0.4)"
+                stroke-width="1.5" />
+
+              <!-- Parlayan Nova Yıldızı (Üstte) -->
+              <path d="M28 8L29.5 13.5L35 15L29.5 16.5L28 22L26.5 16.5L21 15L26.5 13.5L28 8Z" fill="#ffffff" />
+              <circle cx="28" cy="15" r="1.5" fill="#38bdf8" />
+
+              <!-- "N" ve "8" Geometrik Tipografik Amblem -->
+              <path d="M14 39V25L23 39V25" stroke="url(#goldNova)" stroke-width="3.2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="35" cy="28" r="4.5" stroke="#ffffff" stroke-width="2.8" />
+              <circle cx="35" cy="36" r="5.2" stroke="url(#goldNova)" stroke-width="2.8" />
+
+              <!-- Hijyen Su Dalgası Akışı (Altta) -->
+              <path d="M12 45C17 43.5 23 46.5 28 45C33 43.5 39 45.5 44 44" stroke="rgba(255,255,255,0.5)"
+                stroke-width="1.8" stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="brand-title">
+            <div class="brand-main">
+              <span class="brand-nova">NOVA</span>
+              <span class="brand-eight">8</span>
+              <span class="brand-dot">•</span>
+              <span class="brand-service">TEMİZLİK</span>
+            </div>
+            <div class="brand-tagline">
+              <span class="tagline-star">✦</span> PROFESYONEL TEMİZLİK HİZMETLERİ
+            </div>
+          </div>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#hakkimizda">Hakkımızda</a></li>
+          <li><a href="#iletisim">İletişim & Konum</a></li>
+        </ul>
+
+        <a href="https://wa.me/905455407587?text=Merhaba,%20NOVA8%20Temizlik%20hizmetleriniz%20hakkında%20bilgi%20ve%20fiyat%20almak%20istiyorum."
+          target="_blank" class="header-cta-btn">
+          <i class="fa-brands fa-whatsapp"></i> Fiyat Teklifi Al
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Giriş Bölümü -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <div class="owner-pill" aria-label="Banu Beğen, işletme sahibi">
+            <span class="owner-seal"><i class="fa-solid fa-sparkles" aria-hidden="true"></i></span>
+            <span class="owner-sign-copy">
+              <strong>Banu Beğen</strong>
+              <span>NOVA8 Temizlik · İşletme Sahibi</span>
+            </span>
+          </div>
+          <h2>Yaşam Alanlarınızda <span>Ferahlık, Hijyen</span> ve Kusursuz Temizlik</h2>
+          <p>
+            NOVA8 Temizlik olarak eviniz, ofisiniz ve iş yerleriniz için titiz, güvenilir ve kaliteli temizlik çözümleri
+            sunuyoruz. Detaylı hijyen için bize hemen ulaşın.
+          </p>
+
+          <!-- 4 Temel Buton: WhatsApp, Ara, Instagram, Konum -->
+          <div class="action-btn-group">
+            <a href="https://wa.me/905455407587?text=Merhaba,%20NOVA8%20Temizlik%20hakkında%20bilgi%20almak%20istiyorum."
+              target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp fa-lg"></i> WhatsApp Mesaj
+            </a>
+            <a href="tel:05455407587" class="btn btn-call">
+              <i class="fa-solid fa-phone"></i> Hemen Ara: 0545 540 75 87
+            </a>
+            <a href="https://instagram.com/toprak_nova8" target="_blank" rel="noopener noreferrer"
+              class="btn btn-instagram">
+              <i class="fa-brands fa-instagram fa-lg"></i> @toprak_nova8
+            </a>
+            <a href="#konum" class="btn btn-location">
+              <i class="fa-solid fa-location-dot" style="color: #0d9488;"></i> Konuma Git
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <div class="hero-card-icon">
+              <i class="fa-solid fa-hand-sparkles"></i>
+            </div>
+            <div>
+              <h3 style="font-size: 1.2rem; color: #0f172a;">NOVA8 Temizlik Güvencesi</h3>
+              <p style="font-size: 0.82rem; color: var(--turquoise); font-weight: 600;">%100 Müşteri Memnuniyeti</p>
+            </div>
+          </div>
+          <ul class="features-list">
+            <li><i class="fa-solid fa-check"></i> Detaylı Ev ve Villa Temizliği</li>
+            <li><i class="fa-solid fa-check"></i> İnşaat & Tadilat Sonrası Kaba/İnce Temizlik</li>
+            <li><i class="fa-solid fa-check"></i> Ofis, Büro ve İş Yeri Hijyeni</li>
+            <li><i class="fa-solid fa-check"></i> Güler Yüzlü ve Deneyimli Temizlik Ekibi</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hızlı İletişim Şeridi -->
+  <section class="quick-contact-banner">
+    <div class="container">
+      <div class="banner-grid">
+        <a href="tel:05455407587" class="contact-item-box">
+          <div class="contact-item-icon tel-bg"><i class="fa-solid fa-phone"></i></div>
+          <div class="contact-item-text">
+            <span>Telefon ile İletişim</span>
+            <strong>0545 540 75 87</strong>
+          </div>
+        </a>
+        <a href="https://wa.me/905455407587" target="_blank" class="contact-item-box">
+          <div class="contact-item-icon wp-bg"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="contact-item-text">
+            <span>WhatsApp Hattı</span>
+            <strong>Hızlı Mesaj Gönder</strong>
+          </div>
+        </a>
+        <a href="https://instagram.com/toprak_nova8" target="_blank" rel="noopener noreferrer" class="contact-item-box">
+          <div class="contact-item-icon ig-bg"><i class="fa-brands fa-instagram"></i></div>
+          <div class="contact-item-text">
+            <span>Instagram Hesabımız</span>
+            <strong>@toprak_nova8</strong>
+          </div>
+        </a>
+        <a href="#konum" class="contact-item-box">
+          <div class="contact-item-icon loc-bg"><i class="fa-solid fa-location-dot"></i></div>
+          <div class="contact-item-text">
+            <span>Sivas Ofisimiz</span>
+            <strong>Halfelik Cad. No:5</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hizmetlerimiz -->
+  <section class="services-section" id="hizmetler">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Hizmet Alanlarımız</span>
+        <h2 class="section-title">İhtiyacınıza Özel Profesyonel Temizlik</h2>
+        <p class="section-desc">Evinizde ve çalışma alanlarınızda derinlemesine hijyen sağlayan, titizlikle seçilmiş
+          temizlik hizmetlerimiz.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Ev Temizliği -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80"
+              alt="Ev Temizliği">
+            <span class="service-badge"><i class="fa-solid fa-house"></i> Ev Hijyeni</span>
+          </div>
+          <div class="service-body">
+            <h3>Detaylı Ev Temizliği</h3>
+            <p>Oda, mutfak, banyo, camlar ve zeminler dahil olmak üzere evinizi dip bucak temizliyor, mis gibi ferah bir
+              ortama dönüştürüyoruz.</p>
+            <div class="service-footer">
+              <a href="https://wa.me/905455407587?text=Ev%20temizliği%20fiyatı%20öğrenmek%20istiyorum." target="_blank"
+                class="service-btn">
+                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. İnşaat Sonrası Temizlik -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=700&q=80"
+              alt="İnşaat Sonrası Temizlik">
+            <span class="service-badge"><i class="fa-solid fa-paint-roller"></i> Tadilat Sonrası</span>
+          </div>
+          <div class="service-body">
+            <h3>İnşaat & Tadilat Sonrası</h3>
+            <p>Boya lekeleri, harç kalıntıları ve inşaat tozlarını özel temizlik solüsyonları ve ekipmanlarımızla sıfır
+              hasarla tamamen temizliyoruz.</p>
+            <div class="service-footer">
+              <a href="https://wa.me/905455407587?text=İnşaat%20sonrası%20temizlik%20için%20bilgi%20almak%20istiyorum."
+                target="_blank" class="service-btn">
+                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Ofis ve İş Yeri -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?auto=format&fit=crop&w=700&q=80"
+              alt="Ofis Temizliği">
+            <span class="service-badge"><i class="fa-solid fa-building"></i> Kurumsal</span>
+          </div>
+          <div class="service-body">
+            <h3>Ofis & İş Yeri Temizliği</h3>
+            <p>Çalışanlarınız ve müşterileriniz için tertemiz, sağlıklı ve prestijli çalışma alanları hazırlıyoruz.
+              Periyodik veya tek seferlik seçenekler.</p>
+            <div class="service-footer">
+              <a href="https://wa.me/905455407587?text=Ofis%20temizliği%20için%20fiyat%20almak%20istiyorum."
+                target="_blank" class="service-btn">
+                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Taşınma Öncesi Boş Ev -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=700&q=80"
+              alt="Banyo ve Detay Temizlik">
+            <span class="service-badge"><i class="fa-solid fa-truck-ramp-box"></i> Taşınma Öncesi</span>
+          </div>
+          <div class="service-body">
+            <h3>Taşınma Öncesi / Boş Ev</h3>
+            <p>Yeni bir eve taşınmadan önce veya kiracı çıkışlarında dolap içleri, kapılar, prizler ve zeminleri
+              sterilize ederek teslim ediyoruz.</p>
+            <div class="service-footer">
+              <a href="https://wa.me/905455407587?text=Boş%20ev%20veya%20taşınma%20temizliği%20için%20bilgi%20istiyorum."
+                target="_blank" class="service-btn">
+                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Cam ve Dış Cephe -->
+        <div class="service-card">
+          <div class="service-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1585421514738-01798e348b17?auto=format&fit=crop&w=700&q=80"
+              alt="Cam Temizliği">
+            <span class="service-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Parlak Sonuç</span>
+          </div>
+          <div class="service-body">
+            <h3>Cam & Çerçeve Temizliği</h3>
+            <p>İz bırakmayan mikrofiber bezler ve cam parlatıcı solüsyonlarla pencere, balkon camları ve vitrinlerinizde
+              pırıl pırıl ışıltı.</p>
+            <div class="service-footer">
+              <a href="https://wa.me/905455407587?text=Cam%20temizliği%20için%20iletişime%20geçmek%20istiyorum."
+                target="_blank" class="service-btn">
+                Teklif Al <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gerçek Temizlik Görselleri Galerisi -->
+  <section class="gallery-section" id="galeri">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Görseller</span>
+        <h2 class="section-title">Tertemiz ve Işıl Işıl Yaşam Alanları</h2>
+        <p class="section-desc">Göz yormayan, doğal ve gerçek temizlik ortamlarından seçkin kareler.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80"
+            alt="Temiz Salon">
+          <div class="gallery-caption">Ferah ve Düzenli Salon Hijyeni</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80"
+            alt="Mutfak Temizliği">
+          <div class="gallery-caption">Kusursuz Mutfak & Tezgah Temizliği</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+            alt="Banyo Hijyeni">
+          <div class="gallery-caption">Kireç ve Lekelerden Arınmış Banyolar</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkımızda Bölümü -->
+  <section class="about-section" id="hakkimizda">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-card">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80"
+            alt="Banu Begen NOVA8 Temizlik">
+          <div class="experience-tag">
+            <h4>Banu Beğen</h4>
+            <p>İşletme Sahibi & Yönetici</p>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <span class="section-tag">Hakkımızda</span>
+          <h2>NOVA8 Temizlik ile Sivas'ta Güven Veren Hijyen</h2>
+          <p>
+            İşletme sahibi <strong>Banu Beğen</strong> öncülüğünde kurulan <strong>NOVA8 Temizlik</strong>, Sivas merkez
+            ve çevre ilçelerinde temizlik ihtiyaçlarınıza profesyonel ve kalıcı çözümler getirmektedir.
+          </p>
+          <div class="highlight-box">
+            <strong><i class="fa-solid fa-award"></i> İlkemiz: Titizlik, Güven ve Müşteri Memnuniyeti</strong>
+            Bizim için temizlik sadece yüzeysel bir işlem değil; ailelerin huzurla nefes aldığı, çalışanların verimle
+            çalıştığı sağlıklı yaşam alanları inşa etmektir.
+          </div>
+          <p>
+            Kullandığımız kaliteli temizlik malzemeleri ve işine özen gösteren güler yüzlü ekibimizle, söz verdiğimiz
+            saatte adresinizde oluyor ve işimizi eksiksiz tamamlıyoruz.
+          </p>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="https://instagram.com/toprak_nova8" target="_blank" rel="noopener noreferrer"
+              class="btn btn-instagram">
+              <i class="fa-brands fa-instagram"></i> Instagram'da Bizi Takip Edin
+            </a>
+            <a href="tel:05455407587" class="btn btn-call">
+              <i class="fa-solid fa-phone"></i> Hemen Bilgi Alın
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Konum ve Adres Bölümü -->
+  <section class="location-section" id="iletisim">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bize Ulaşın</span>
+        <h2 class="section-title">Konum ve İletişim Bilgilerimiz</h2>
+        <p class="section-desc">Ofisimize bekleriz veya tek bir telefonla adresinize gelelim.</p>
+      </div>
+
+      <div class="location-wrapper" id="konum">
+        <div class="location-details">
+          <h3>NOVA8 Temizlik Ofisi</h3>
+          <p style="color: var(--text-muted); margin-bottom: 15px;">
+            Sivas merkezinde kolayca ulaşabileceğiniz adresimiz:
+          </p>
+
+          <div class="address-card">
+            <p>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>
+                <strong>Açık Adres:</strong><br>
+                Mehmet Akif Ersoy Mah. Halfelik Cad. No:5<br>
+                Emmioğlu Apt. Altı (Toprak Gayrimenkul), Sivas
+              </span>
+            </p>
+          </div>
+
+          <p style="font-size: 0.95rem; margin-bottom: 20px;">
+            <i class="fa-solid fa-user-check" style="color: var(--teal-green);"></i> <strong>Yetkili:</strong> Banu
+            Beğen<br>
+            <i class="fa-solid fa-phone" style="color: var(--primary);"></i> <strong>Telefon:</strong> 0545 540 75
+            87<br>
+            <i class="fa-brands fa-instagram" style="color: #e1306c;"></i> <strong>Instagram:</strong> @toprak_nova8
+          </p>
+
+          <div class="location-actions">
+            <!-- Google Maps Yönlendirme Butonu -->
+            <a href="https://www.google.com/maps/search/?api=1&query=Mehmet+Akif+Ersoy+Mah.+Halfelik+cad.+No:5+Emmioglu+apt+alti+Toprak+gayrimenkul+Sivas"
+              target="_blank" class="btn btn-location" style="background: var(--turquoise); color: #fff; border: none;">
+              <i class="fa-solid fa-diamond-turn-right"></i> Haritada Aç / Yol Tarifi
+            </a>
+            <a href="https://wa.me/905455407587" target="_blank" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Konum İste
+            </a>
+          </div>
+        </div>
+
+        <div class="map-frame-box">
+          <!-- İnteraktif Harita (Engelsiz ve iframe güvenli) -->
+          <iframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=37.0000%2C39.7350%2C37.0350%2C39.7550&amp;layer=mapnik&amp;marker=39.7450%2C37.0175"
+            style="width: 100%; height: 100%; border: 0;" allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="premium-logo-icon">
+              <svg width="48" height="48" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg"
+                class="premium-logo-svg" style="width: 48px; height: 48px;">
+                <defs>
+                  <linearGradient id="novaBgFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0284c7" />
+                    <stop offset="50%" stop-color="#0f766e" />
+                    <stop offset="100%" stop-color="#047857" />
+                  </linearGradient>
+                  <linearGradient id="goldNovaFoot" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#38bdf8" />
+                    <stop offset="50%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="#2dd4bf" />
+                  </linearGradient>
+                </defs>
+                <rect x="2" y="2" width="52" height="52" rx="16" fill="url(#novaBgFoot)" />
+                <rect x="3.5" y="3.5" width="49" height="49" rx="14.5" stroke="rgba(255,255,255,0.4)"
+                  stroke-width="1.5" />
+                <path d="M28 8L29.5 13.5L35 15L29.5 16.5L28 22L26.5 16.5L21 15L26.5 13.5L28 8Z" fill="#ffffff" />
+                <circle cx="28" cy="15" r="1.5" fill="#38bdf8" />
+                <path d="M14 39V25L23 39V25" stroke="url(#goldNovaFoot)" stroke-width="3.2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="35" cy="28" r="4.5" stroke="#ffffff" stroke-width="2.8" />
+                <circle cx="35" cy="36" r="5.2" stroke="url(#goldNovaFoot)" stroke-width="2.8" />
+              </svg>
+            </div>
+            <div class="brand-title">
+              <div class="brand-main">
+                <span class="brand-nova" style="color: #ffffff;">NOVA</span>
+                <span class="brand-eight"
+                  style="background: linear-gradient(135deg, #38bdf8 0%, #2dd4bf 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">8</span>
+                <span class="brand-dot" style="color: #2dd4bf;">•</span>
+                <span class="brand-service" style="color: #38bdf8;">TEMİZLİK</span>
+              </div>
+              <div class="brand-tagline" style="color: #94a3b8;">
+                <span class="tagline-star" style="color: #38bdf8;">✦</span> SİVAS PROFESYONEL TEMİZLİK
+              </div>
+            </div>
+          </div>
+          <p style="font-size: 0.9rem; line-height: 1.6; color: #94a3b8; max-width: 400px;">
+            İşletme Sahibi Banu Beğen güvencesiyle ev, ofis, villa, inşaat sonrası ve detaylı temizlikte
+            Sivas'ın güvenilir çözüm ortağı.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Hızlı Bağlantılar</h4>
+          <ul>
+            <li><a href="#hizmetler"><i class="fa-solid fa-angle-right"></i> Hizmetlerimiz</a></li>
+            <li><a href="#galeri"><i class="fa-solid fa-angle-right"></i> Galeri</a></li>
+            <li><a href="#hakkimizda"><i class="fa-solid fa-angle-right"></i> Hakkımızda</a></li>
+            <li><a href="#iletisim"><i class="fa-solid fa-angle-right"></i> Konum & Harita</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>İletişim & Adres</h4>
+          <p><i class="fa-solid fa-phone" style="color: var(--primary);"></i> 0545 540 75 87</p>
+          <p><i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp Hızlı Hat</p>
+          <p><i class="fa-brands fa-instagram" style="color: #f472b6;"></i> @toprak_nova8</p>
+          <p><i class="fa-solid fa-location-dot" style="color: var(--turquoise);"></i> Halfelik Cad. No:5, Sivas</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 NOVA8 Temizlik - Banu Beğen. Tüm hakları saklıdır. Sivas Profesyonel Temizlik Hizmetleri.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobil Ekranlar İçin Sabit Alt Bar (Telefon Ekranına %100 Uyumlu Hızlı Erişim) -->
+  <div class="mobile-sticky-bar">
+    <div class="mobile-bar-inner">
+      <a href="tel:05455407587" class="mobile-action-btn m-call">
+        <i class="fa-solid fa-phone"></i>
+        <span>Ara</span>
+      </a>
+      <a href="https://wa.me/905455407587?text=Merhaba,%20NOVA8%20Temizlik%20hakkında%20bilgi%20almak%20istiyorum."
+        target="_blank" class="mobile-action-btn m-wp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
+      <a href="https://instagram.com/toprak_nova8" target="_blank" rel="noopener noreferrer"
+        class="mobile-action-btn m-ig">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+      <a href="https://www.google.com/maps/search/?api=1&query=Mehmet+Akif+Ersoy+Mah.+Halfelik+cad.+No:5+Emmioglu+apt+alti+Toprak+gayrimenkul+Sivas"
+        target="_blank" class="mobile-action-btn m-map">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Konum</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>
